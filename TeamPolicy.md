@@ -56,8 +56,11 @@ Main branch only changed when new, complete features are added
 Stage branch changed when individual has new branch to add
 
 - One group repo, an org with all group members added
-  - Individuals make branches = name
-  - After branch is merged, pull down *stage branch* to local computer
+  - Individuals make branches for each new feature off of the stage = name_feature
+  - A-C-P 'git add file(s), git commit -m "message", push origin name_feature'
+  - Complete Pull Request on Github
+  - Go back to terminal- 'git checkout stage'
+  - 'git pull origin stage'
 - To push stage to main, all group members must review and approve
 - To push individual branch to stage, one other group member must review and approve
 - Last reviewer merges the Pull Request
