@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Piano</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/module.css">
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/piano.css">
+</head>
+
+<body>
+  <header></header>
+
+  <main>
+
+    <div id = "synthSwitch">
+      <label class="switch">
+        <input id="check" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div>
+      <button id="buttonAS" type="button">Testing Key A#</button>
+    </div>
+    <div>
+      <button id="buttonA" type="button">Testing Key A</button>
+    </div>
+    <div>
+      <button id="buttonB" type="button">Testing Key B</button>
+    </div>
+    <div>
+      <button id="buttonCS" type="button">Testing Key C#</button>
+    </div>
+    <div>
+      <button id="buttonC" type="button">Testing Key C</button>
+    </div>
+    <div>
+      <button id="buttonDS" type="button">Testing Key D#</button>
+    </div>
+    <div>
+      <button id="buttonD" type="button">Testing Key D</button>
+    </div>
+    <div>
+      <button id="buttonE" type="button">Testing Key E</button>
+    </div>
+    <div>
+      <button id="buttonFS" type="button">Testing Key F#</button>
+    </div>
+    <div>
+      <button id="buttonF" type="button">Testing Key F</button>
+    </div>
+    <div>
+      <button id="buttonGS" type="button">Testing Key G#</button>
+    </div>
+    <div>
+      <button id="buttonG" type="button">Testing Key G</button>
+    </div>
+    <div>
+      <button id="CMajor" type="button">Test Chord C Major</button>
+    </div>
+
+    <div class="noteList">
+      <audio controls id="AS3Note">
+        <source src="./notes/AS3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="A3Note">
+        <source src="./notes/A3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="B3Note">
+        <source src="./notes/B3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="CS3Note">
+        <source src="./notes/CS3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="C3Note">
+        <source src="./notes/C3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="DS3Note">
+        <source src="./notes/DS3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="D3Note">
+        <source src="./notes/D3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="E3Note">
+        <source src="./notes/E3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="FS3Note">
+        <source src="./notes/FS3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="F3Note">
+        <source src="./notes/F3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="GS3Note">
+        <source src="./notes/GS3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="G3Note">
+        <source src="./notes/G3.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <section id="record">
+      <button type="button">Record Chord Notes</button>
+    </section>
+
+    <section id="playback">
+      <button type="button">Play Custom Chord</button>
+    </section>
+
+  </main>
+  <footer></footer>
+</body>
+
+<script src="./js/app.js"></script>
+<script src="./js/app2.js"></script>
+
+</html>
