@@ -44,16 +44,38 @@
       scroll-snap-align: center;
     }
   }
-  
-  body {
-    max-width: 37.5rem;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-    font-family: 'Lato', sans-serif;
-    background:url(/img/piano.jpeg);
+  body{
+    background:url(/img/piano.jpeg) no-repeat;
     background-size: contain; 
   }
-  
+  main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  audio{
+    margin-left: 130px;
+  }
+  .carousel h2{
+    color: white;
+    margin-left: 140px;
+    font-family: 'Tangerine', cursive;
+    font-size: 30pt;
+  }
+  body{
+    background-color: black;
+  }
+  a:link{
+    color: white;
+    text-decoration: none;
+  }
+  a:visited{
+    color: white;
+    text-decoration: none;
+  }
+  a:hover{
+    background-color: rgba(255,165,0,0.5)
+  }
   * {
     box-sizing: border-box;
     scrollbar-color: transparent transparent; 
@@ -76,6 +98,21 @@
   * {
     -ms-overflow-style: none;
   }
+
+#navBar{
+  color: white;
+  font-size: 2em;
+  font-family: 'Tangerine', cursive;
+  height: 10px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: 180px;
+  width: 500px;
+}
+li{
+  width:fit-content;
+  display: inline;
+}
 main p{
   margin-top: 30%;
   margin-bottom: 30%;
@@ -86,13 +123,27 @@ main p{
   color: white;
   font-family:'Tangerine', cursive; 
   animation: fadein 3s;
-}
-main h1{
-  
+} 
+
+header h1{
   color: white;
-  font-size: 1000%;
+  font-size: 5em;
+  padding-left: 50px;
+  padding-top:20px;
   font-family: 'Tangerine', cursive;
   animation: fadein 3s;
+}
+header{
+  border-bottom: 5px solid lightgrey;
+  content: "";
+  display: flex;
+  flex: 1 1;
+  flex-wrap: nowrap;
+  font-style: italic;
+  font-weight: bold;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 50px;
 }
 @keyframes fadein{
   from {opacity: 0;}
