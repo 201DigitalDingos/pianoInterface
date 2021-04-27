@@ -50,9 +50,8 @@
     margin: 0 auto;
     padding: 0 1.25rem;
     font-family: 'Lato', sans-serif;
-    background:url(/img/piano.jpeg) no-repeat;
-    background-size: cover; 
-    background-position: center;
+    background:url(/img/piano.jpeg);
+    background-size: contain; 
   }
   
   * {
@@ -86,11 +85,18 @@ main p{
   font-size: 50pt;
   color: white;
   font-family:'Tangerine', cursive; 
+  animation: fadein 3s;
 }
 main h1{
+  
   color: white;
   font-size: 1000%;
   font-family: 'Tangerine', cursive;
+  animation: fadein 3s;
+}
+@keyframes fadein{
+  from {opacity: 0;}
+  to {opacity: 1}
 }
 .carousel h1{
   color: white;
@@ -140,7 +146,6 @@ main h1{
     width: 100%;
     background-color:black;
   }
-
   .slide:nth-child(1) {
     background: url('/img/Sunny.png') center;
     border-radius: 360px;
@@ -161,8 +166,6 @@ main h1{
       background:url('/img/Keian.jpeg') center;
       border-radius: 300px;
   }
- 
-
   .slide:before {
     content: counter();
     position: absolute;
@@ -172,7 +175,6 @@ main h1{
     color: #fff;
     font-size: 2em;
   }
-  
   .snapper {
     position: absolute;
     top: 0;
@@ -207,12 +209,10 @@ main h1{
       animation-name: none;
     }
   }
-  
   .carousel:hover .snapper,
   .carousel:focus-within .snapper {
     animation-name: none;
   }
-  
   .navigation {
     position: absolute;
     right: 0;
@@ -220,12 +220,10 @@ main h1{
     left: 0;
     text-align: center;
   }
-  
   .navigationDev,
   .navigationItems {
     display: inline-block;
   }
-  
   .navButton {
     display: inline-block;
     width: 1.5rem;
@@ -237,7 +235,6 @@ main h1{
     font-size: 0;
     transition: transform 0.1s;
   }
-  
   .carousel::before,
   .carousel::after,
   .previous,
