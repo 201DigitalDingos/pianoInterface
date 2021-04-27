@@ -27,18 +27,18 @@ function toggleRecord() {
 }
 
 // keys
-const buttonAS = document.getElementById("buttonAS");
-const buttonA = document.getElementById("buttonA");
-const buttonB = document.getElementById("buttonB");
-const buttonCS = document.getElementById("buttonCS");
-const buttonC = document.getElementById("buttonC");
-const buttonDS = document.getElementById("buttonDS");
-const buttonD = document.getElementById("buttonD");
-const buttonE = document.getElementById("buttonE");
-const buttonFS = document.getElementById("buttonFS");
-const buttonF = document.getElementById("buttonF");
-const buttonGS = document.getElementById("buttonGS");
-const buttonG = document.getElementById("buttonG");
+const buttonAS = document.getElementById("buttonAS3");
+const buttonA = document.getElementById("buttonA3");
+const buttonB = document.getElementById("buttonB3");
+const buttonCS = document.getElementById("buttonCS3");
+const buttonC = document.getElementById("buttonC3");
+const buttonDS = document.getElementById("buttonDS3");
+const buttonD = document.getElementById("buttonD3");
+const buttonE = document.getElementById("buttonE3");
+const buttonFS = document.getElementById("buttonFS3");
+const buttonF = document.getElementById("buttonF3");
+const buttonGS = document.getElementById("buttonGS3");
+const buttonG = document.getElementById("buttonG3");
 
 // chords
 const cMajorButton = document.getElementById("CMajor");
