@@ -2,13 +2,23 @@
 html {
 /* background-color:white;  */
 color: black;
+/* background-image: linear-gradient(white, ghostwhite, lightgray, gray); */
 
 }
 
+main {
+  background-image: linear-gradient(white, ghostwhite, lightgray, gray);
+  height: 800px;
+}
+
+/* body {
+  /* background-image: linear-gradient(white, ghostwhite, lightgray, gray); */
+/* } */ 
 p {
   font-family: 'Tangerine', cursive;
   font-size: 2em;
   margin-top: 50px;
+  /* margin-bottom: auto; */
 
 }
 
@@ -32,6 +42,7 @@ nav {
   margin-left: 450px;
   width: 500px;
   
+  
 }
 
 nav ul li{
@@ -42,8 +53,8 @@ nav ul li{
 }
 
 header {
-  border-bottom: 5px solid lightgrey;
-  content: "";
+  border-bottom: 5px solid ghostwhite;
+  content: ""; 
   display: flex;
   flex: 1 1;
   flex-wrap: nowrap;
@@ -68,13 +79,14 @@ nav ul{
   height: 10px;
   list-style: none;
   padding-top: 1em;
+  padding-left: 5em;
   width: 300px;
   /* white-space: nowrap; */
 
 }
 
 a {
-  color: black;
+  color: black; 
 }
 
 /* .box {
@@ -89,6 +101,10 @@ a {
   background-image: linear-gradient(white, gray);
 } */
 
-main {
+/* main {
   background-image: linear-gradient(white, ghostwhite, lightgray, gray);
+} */
+
+li {
+  padding-inline:.3em;
 }
