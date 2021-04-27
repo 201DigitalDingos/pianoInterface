@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='/css/reset.css'/> 
+        <link rel='stylesheet' href='/css/aboutUs.css'/>
+        <title>About Us.</title> 
+    </head>
+    <body>
+        <main>
+           <section class="carousel" aria-label="gallery">
+               <ol class="view">
+                   <li id="devOne" tabindex="0" class="slide">
+                       <div class="snapper">
+                           <a href="#devFive" class="previous"></a>
+                        <a href="#devTwo" class="next"></a>
+                        </div>
+                   </li>
+                   <li id="devTwo" tabindex="0" class="slide">
+                       <div class="snapper"></div>
+                       <a href="#devOne" class="previous"></a>
+                       <a href="#devThree" class="next"></a>
+                    </li>
+                    <li id="devThree" tabindex="0" class="slide">
+                        <div class="snapper"></div>
+                        <a href="#devTwo" class="previous"></a>
+                        <a href="#devFour" class="next"></a>
+                    </li>
+                    <li id="devFour" tabindex="0" class="slide">
+                        <div class="snapper"></div>
+                        <a href="#devThree" class="previous"></a>
+                        <a href="#devFive" class="next"></a>
+                    </li>
+                    <li id="devFive" tabindex="0" class="slide">
+                        <div class="snapper"></div>
+                        <a href="#devFour" class="previous"></a>
+                        <a href="#devOne" class="next"></a>
+                    </li>
+               </ol>
+               <aside class="navigation">
+                   <ol class="navigationDev">
+                    <li class="navigationItems">
+                        <a href='#devOne' class="navButton"></a>
+                    </li>
+                    <li class="navigationItems">
+                        <a href='#devTwo' class="navButton"></a>
+                    </li>  
+                    <li class="navigationItems">
+                     <a href='#devThree' class="navButton"></a>
+                    </li>
+                    <li class="navigationItems">
+                        <a href='#devFour' class="navButton"></a>
+                    </li>
+                    <li class="navigationItems">
+                        <a href='#devFive' class="navButton"></a>
+                    </li>                 
+                   </ol> 
+               </aside>
+           </section>
+        </main>
+    </body>
+</html>
