@@ -80,6 +80,7 @@ gSMajorButton.addEventListener('click', handleClickGSMajor);
 aMajorButton.addEventListener('click', handleClickAMajor); 
 aSMajorButton.addEventListener('click', handleClickASMajor);
 bMajorButton.addEventListener('click', handleClickBMajor); 
+
 // function to play notes
 function playNote(ElemID) {
   if (recording === true) {
@@ -182,7 +183,7 @@ function handleClickDSMajor(){
 }
 
 function handleClickEMajor(){
-  playChord("E3Note", "GS3Note", "BNote");
+  playChord("E3Note", "GS3Note", "B3Note");
 }
 
 function handleClickFMajor(){
