@@ -2,6 +2,9 @@
 
 // recording
 let recording = false;
+let showNote = false;
+const noteArray = document.getElementsByClassName("text");
+// console.log(noteArray);
 const recordButton = document.getElementById("customChord");
 
 // recording array
@@ -17,11 +20,32 @@ function localStorageUpdate() {
 // record button listener
 recordButton.addEventListener('click', toggleRecord);
 
+// function callback for recording custom chord
 function toggleRecord() {
   recording = !(recording);
-  console.log(recording);
   if (recording) {
     recordingArray = [];
+  }
+}
+
+// listener to button for text toggle
+const noteDisplay = document.getElementById("noteDisplay");
+
+// event listener for text toggle
+noteDisplay.addEventListener('change', noteDisplayFunc);
+
+// callback function for text toggle
+function noteDisplayFunc() {
+  showNote = !(showNote);
+  if (showNote === true) {
+    for (let note of noteArray) {
+      note.setAttribute('class', 'shown text');
+    }
+  }
+  if (showNote === false) {
+    for (let note of noteArray) {
+      note.setAttribute('class', 'hidden text');
+    }
   }
 }
 
