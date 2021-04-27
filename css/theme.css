@@ -1,0 +1,93 @@
+
+html {
+/* background-color:white;  */
+color: black;
+
+}
+
+p {
+  font-family: 'Tangerine', cursive;
+  font-size: 2em;
+  margin-top: 50px;
+
+}
+
+h1 {
+  box-sizing: content-box;
+  font-family: 'Tangerine', cursive;; 
+  font-size: 5em;
+  /* padding-right: 50px; */
+  padding-left: 50px;
+  padding-top: 10px;
+  width: max-content;
+  
+}
+
+nav {
+  font-family: 'Tangerine', cursive;
+  font-size: 2em;
+  height: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 450px;
+  width: 500px;
+  
+}
+
+nav ul li{
+  display: inline;
+  /* position: static; */
+  /* margin-left: 150px; */
+  
+}
+
+header {
+  border-bottom: 5px solid lightgrey;
+  content: "";
+  display: flex;
+  flex: 1 1;
+  flex-wrap: nowrap;
+  font-style: italic;
+  font-weight: bold;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 50px;
+     
+}
+
+img {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  width: 98%
+  
+}
+
+nav ul{
+  height: 10px;
+  list-style: none;
+  padding-top: 1em;
+  width: 300px;
+  /* white-space: nowrap; */
+
+}
+
+a {
+  color: black;
+}
+
+/* .box {
+  background-image: linear-gradient(white, ghostwhite, lightgray, gray);
+} */
+
+/* .boxtwo {
+  background-image: linear-gradient(white, ghostwhite, lightgray, gray);
+} */
+
+/* .boxthree {
+  background-image: linear-gradient(white, gray);
+} */
+
+main {
+  background-image: linear-gradient(white, ghostwhite, lightgray, gray);
+}
