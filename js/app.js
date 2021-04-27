@@ -2,8 +2,7 @@
 
 // recording
 let recording = false;
-
-const recordButton = document.getElementById("record");
+const recordButton = document.getElementById("customChord");
 
 // recording array
 let recordingArray = [];
@@ -42,6 +41,17 @@ const buttonG = document.getElementById("buttonG3");
 
 // chords
 const cMajorButton = document.getElementById("CMajor");
+const cSMajorButton = document.getElementById("CSMajor");
+const dMajorButton = document.getElementById("DMajor");
+const dSMajorButton = document.getElementById("DSMajor");
+const eMajorButton = document.getElementById("EMajor");
+const fMajorButton = document.getElementById("FMajor");
+const fSMajorButton = document.getElementById("FSMajor");
+const gMajorButton = document.getElementById("GMajor");
+const gSMajorButton = document.getElementById("GSMajor");
+const aMajorButton = document.getElementById("AMajor");
+const aSMajorButton = document.getElementById("ASMajor");
+const bMajorButton = document.getElementById("BMajor");
 
 // keys event listeners
 buttonAS.addEventListener('click', handleClickAS);
@@ -59,7 +69,17 @@ buttonG.addEventListener('click', handleClickG);
 
 // chords event listeners
 cMajorButton.addEventListener('click', handleClickCMajor);
-
+cSMajorButton.addEventListener('click', handleClickCSMajor);
+dMajorButton.addEventListener('click', handleClickDMajor);
+dSMajorButton.addEventListener('click', handleClickDSMajor);
+eMajorButton.addEventListener('click', handleClickEMajor);
+fMajorButton.addEventListener('click', handleClickFMajor); 
+fSMajorButton.addEventListener('click', handleClickFSMajor);
+gMajorButton.addEventListener('click', handleClickGMajor);
+gSMajorButton.addEventListener('click', handleClickGSMajor);
+aMajorButton.addEventListener('click', handleClickAMajor); 
+aSMajorButton.addEventListener('click', handleClickASMajor);
+bMajorButton.addEventListener('click', handleClickBMajor); 
 // function to play notes
 function playNote(ElemID) {
   if (recording === true) {
@@ -145,10 +165,62 @@ function handleClickG() {
 }
 
 // C Major chord
-function handleClickCMajor() {
-  const x = document.getElementById("C3Note");
-  const y = document.getElementById("E3Note");
-  const z = document.getElementById("G3Note");
+function handleClickCMajor(){
+  playChord("C3Note", "E3Note", "G3Note");
+}
+
+function handleClickCSMajor(){
+  playChord("CS3Note", "F3Note", "GS3Note");
+}
+
+function handleClickDMajor(){
+  playChord("D3Note", "FS3Note", "A3Note");
+}
+
+function handleClickDSMajor(){
+  playChord("DS3Note", "G3Note", "AS3Note");
+}
+
+function handleClickEMajor(){
+  playChord("E3Note", "GS3Note", "BNote");
+}
+
+function handleClickFMajor(){
+  playChord("F3Note", "A3Note", "C3Note");
+}
+
+function handleClickFSMajor(){
+  playChord("FS3Note", "AS3Note", "CS3Note");
+}
+
+function handleClickGMajor(){
+  playChord("G3Note", "B3Note", "D3Note");
+}
+
+function handleClickGSMajor(){
+  playChord("GS3Note", "C3Note", "DS3Note");
+}
+
+function handleClickAMajor(){
+  playChord("A3Note", "CS3Note", "E3Note");
+}
+
+function handleClickASMajor(){
+  playChord("AS3Note", "D3Note", "F3Note");
+}
+
+function handleClickBMajor(){
+  playChord("B3Note", "DS3Note", "FS3Note");
+}
+
+
+function playChord(a, b, c) {
+  const x = document.getElementById(a);
+  const y = document.getElementById(b);
+  const z = document.getElementById(c);
+  x.load();
+  y.load();
+  z.load();
   x.play();
   y.play();
   z.play();
