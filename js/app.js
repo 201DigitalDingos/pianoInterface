@@ -73,13 +73,13 @@ cSMajorButton.addEventListener('click', handleClickCSMajor);
 dMajorButton.addEventListener('click', handleClickDMajor);
 dSMajorButton.addEventListener('click', handleClickDSMajor);
 eMajorButton.addEventListener('click', handleClickEMajor);
-fMajorButton.addEventListener('click', handleClickFMajor); 
+fMajorButton.addEventListener('click', handleClickFMajor);
 fSMajorButton.addEventListener('click', handleClickFSMajor);
 gMajorButton.addEventListener('click', handleClickGMajor);
 gSMajorButton.addEventListener('click', handleClickGSMajor);
-aMajorButton.addEventListener('click', handleClickAMajor); 
+aMajorButton.addEventListener('click', handleClickAMajor);
 aSMajorButton.addEventListener('click', handleClickASMajor);
-bMajorButton.addEventListener('click', handleClickBMajor); 
+bMajorButton.addEventListener('click', handleClickBMajor);
 
 // function to play notes
 function playNote(ElemID) {
@@ -166,51 +166,51 @@ function handleClickG() {
 }
 
 // C Major chord
-function handleClickCMajor(){
+function handleClickCMajor() {
   playChord("C3Note", "E3Note", "G3Note");
 }
 
-function handleClickCSMajor(){
+function handleClickCSMajor() {
   playChord("CS3Note", "F3Note", "GS3Note");
 }
 
-function handleClickDMajor(){
+function handleClickDMajor() {
   playChord("D3Note", "FS3Note", "A3Note");
 }
 
-function handleClickDSMajor(){
+function handleClickDSMajor() {
   playChord("DS3Note", "G3Note", "AS3Note");
 }
 
-function handleClickEMajor(){
+function handleClickEMajor() {
   playChord("E3Note", "GS3Note", "B3Note");
 }
 
-function handleClickFMajor(){
+function handleClickFMajor() {
   playChord("F3Note", "A3Note", "C3Note");
 }
 
-function handleClickFSMajor(){
+function handleClickFSMajor() {
   playChord("FS3Note", "AS3Note", "CS3Note");
 }
 
-function handleClickGMajor(){
+function handleClickGMajor() {
   playChord("G3Note", "B3Note", "D3Note");
 }
 
-function handleClickGSMajor(){
+function handleClickGSMajor() {
   playChord("GS3Note", "C3Note", "DS3Note");
 }
 
-function handleClickAMajor(){
+function handleClickAMajor() {
   playChord("A3Note", "CS3Note", "E3Note");
 }
 
-function handleClickASMajor(){
+function handleClickASMajor() {
   playChord("AS3Note", "D3Note", "F3Note");
 }
 
-function handleClickBMajor(){
+function handleClickBMajor() {
   playChord("B3Note", "DS3Note", "FS3Note");
 }
 
