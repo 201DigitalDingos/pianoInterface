@@ -1,22 +1,23 @@
 
 html {
-/* background-color:white;  */
 color: black;
+}
 
+main {
+  background-image: linear-gradient(white, ghostwhite, lightgray, gray);
+  height: 800px;
 }
 
 p {
   font-family: 'Tangerine', cursive;
   font-size: 2em;
   margin-top: 50px;
-
 }
 
 h1 {
   box-sizing: content-box;
   font-family: 'Tangerine', cursive;; 
   font-size: 5em;
-  /* padding-right: 50px; */
   padding-left: 50px;
   padding-top: 10px;
   width: max-content;
@@ -31,19 +32,15 @@ nav {
   margin-bottom: 20px;
   margin-left: 450px;
   width: 500px;
-  
 }
 
 nav ul li{
   display: inline;
-  /* position: static; */
-  /* margin-left: 150px; */
-  
 }
 
 header {
-  border-bottom: 5px solid lightgrey;
-  content: "";
+  border-bottom: 5px solid ghostwhite;
+  content: ""; 
   display: flex;
   flex: 1 1;
   flex-wrap: nowrap;
@@ -52,7 +49,6 @@ header {
   justify-content: space-between;
   margin: auto;
   margin-bottom: 50px;
-     
 }
 
 img {
@@ -61,34 +57,20 @@ img {
   margin-top: 10px;
   width: 98%;
   height: 300px;
-  
 }
 
 nav ul{
   height: 10px;
   list-style: none;
   padding-top: 1em;
+  padding-left: 5em;
   width: 300px;
-  /* white-space: nowrap; */
-
 }
 
 a {
-  color: black;
+  color: black; 
 }
 
-/* .box {
-  background-image: linear-gradient(white, ghostwhite, lightgray, gray);
-} */
-
-/* .boxtwo {
-  background-image: linear-gradient(white, ghostwhite, lightgray, gray);
-} */
-
-/* .boxthree {
-  background-image: linear-gradient(white, gray);
-} */
-
-main {
-  background-image: linear-gradient(white, ghostwhite, lightgray, gray);
+li {
+  padding-inline:.3em;
 }

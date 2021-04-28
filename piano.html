@@ -9,59 +9,113 @@
   <link rel="stylesheet" href="./css/module.css">
   <link rel="stylesheet" href="./css/theme.css">
   <link rel="stylesheet" href="./css/piano.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header></header>
+  <header class="box">
+    <h1>Piano Interface</h1>
+    <nav>
+      <ul>
+        <li><a href="./index.html"></a>Home</li>
+        <li><a href="./piano.html">Piano</a></li>
+        <li><a href="./aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-
-    <div id = "synthSwitch">
+    <div id="synthSwitch">
+      <h2>Synth:</h2>
       <label class="switch">
         <input id="check" type="checkbox">
         <span class="slider round"></span>
       </label>
     </div>
 
-    <div>
-      <button id="buttonAS" type="button">Testing Key A#</button>
+    <div id="noteDisplay">
+      <h2>Display Notes:</h2>
+      <label class="switch">
+        <input id="check1" type="checkbox">
+        <span class="slider round"></span>
+      </label>
     </div>
-    <div>
-      <button id="buttonA" type="button">Testing Key A</button>
-    </div>
-    <div>
-      <button id="buttonB" type="button">Testing Key B</button>
-    </div>
-    <div>
-      <button id="buttonCS" type="button">Testing Key C#</button>
-    </div>
-    <div>
-      <button id="buttonC" type="button">Testing Key C</button>
-    </div>
-    <div>
-      <button id="buttonDS" type="button">Testing Key D#</button>
-    </div>
-    <div>
-      <button id="buttonD" type="button">Testing Key D</button>
-    </div>
-    <div>
-      <button id="buttonE" type="button">Testing Key E</button>
-    </div>
-    <div>
-      <button id="buttonFS" type="button">Testing Key F#</button>
-    </div>
-    <div>
-      <button id="buttonF" type="button">Testing Key F</button>
-    </div>
-    <div>
-      <button id="buttonGS" type="button">Testing Key G#</button>
-    </div>
-    <div>
-      <button id="buttonG" type="button">Testing Key G</button>
-    </div>
-    <div>
-      <button id="CMajor" type="button">Test Chord C Major</button>
-    </div>
+
+    <section>
+      <button type="button" id="customChord">Record Chord Notes</button>
+      <button type="button" id="playback">Play Custom Chord</button>
+    </section>
+
+    <section id="chordButtons">
+      <div>
+        <h2>Chords:</h2>
+        <button id="CMajor" type="button">C Major</button>
+        <button id="CSMajor" type="button">C Sharp Major</button>
+        <button id="DMajor" type="button">D Major</button>
+        <button id="DSMajor" type="button">D Sharp Major</button>
+        <button id="EMajor" type="button">E Major</button>
+        <button id="FMajor" type="button">F Major</button>
+        <button id="FSMajor" type="button">F Sharp Major</button>
+        <button id="GMajor" type="button">G Major</button>
+        <button id="GSMajor" type="button">G Sharp Major</button>
+        <button id="AMajor" type="button">A Major</button>
+        <button id="ASMajor" type="button">A Sharp Major</button>
+        <button id="BMajor" type="button">B Major</button>
+      </div>
+    </section>
+
+    <section id="keyboard">
+      <!-- Octave 1 -->
+      <button class="whiteKey" id="buttonC3" type="button">
+        <p class="hidden text">C</p>
+      </button>
+      <button class="blackKey" id="buttonCS3" type="button">
+        <p class="hidden text">C#</p>
+      </button>
+      <button class="whiteKey" id="buttonD3" type="button">
+        <p class="hidden text">D</p>
+      </button>
+      <button class="blackKey" id="buttonDS3" type="button">
+        <p class="hidden text">D#</p>
+      </button>
+      <button class="whiteKey" id="buttonE3" type="button">
+        <p class="hidden text">E</p>
+      </button>
+      <button class="whiteKey" id="buttonF3" type="button">
+        <p class="hidden text">F</p>
+      </button>
+      <button class="blackKey" id="buttonFS3" type="button">
+        <p class="hidden text">F#</p>
+      </button>
+      <button class="whiteKey" id="buttonG3" type="button">
+        <p class="hidden text">G</p>
+      </button>
+      <button class="blackKey" id="buttonGS3" type="button">
+        <p class="hidden text">G#</p>
+      </button>
+      <button class="whiteKey" id="buttonA3" type="button">
+        <p class="hidden text">A</p>
+      </button>
+      <button class="blackKey" id="buttonAS3" type="button">
+        <p class="hidden text">A#</p>
+      </button>
+      <button class="whiteKey" id="buttonB3" type="button">
+        <p class="hidden text">B</p>
+      </button>
+      <!-- Octave 2 -->
+      <button class="whiteKey" id="buttonC4" type="button"></button>
+      <button class="blackKey" id="buttonCS4" type="button"></button>
+      <button class="whiteKey" id="buttonD4" type="button"></button>
+      <button class="blackKey" id="buttonDS4" type="button"></button>
+      <button class="whiteKey" id="buttonE4" type="button"></button>
+      <button class="whiteKey" id="buttonF4" type="button"></button>
+      <button class="blackKey" id="buttonFS4" type="button"></button>
+      <button class="whiteKey" id="buttonG4" type="button"></button>
+      <button class="blackKey" id="buttonGS4" type="button"></button>
+      <button class="whiteKey" id="buttonA4" type="button"></button>
+      <button class="blackKey" id="buttonAS4" type="button"></button>
+      <button class="whiteKey" id="buttonB4" type="button"></button>
+    </section>
 
     <div class="noteList">
       <audio controls id="AS3Note">
@@ -101,15 +155,6 @@
         <source src="./notes/G3.mp3" type="audio/mpeg">
       </audio>
     </div>
-
-    <section id="record">
-      <button type="button">Record Chord Notes</button>
-    </section>
-
-    <section id="playback">
-      <button type="button">Play Custom Chord</button>
-    </section>
-
   </main>
   <footer></footer>
 </body>

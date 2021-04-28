@@ -2,9 +2,40 @@
   display: none;
 }
 
+.blackKey {
+  background-color: black; 
+  border-style: solid;
+  border-color: black; 
+  border-width:thin;
+  border: 1px solid black;
+  z-index: 1;
+  margin: 0px 10px;
+}
 
+.whiteKey {
+  border-style: solid;
+  border-color: black; 
+  border-width:thin;
+  border: 1px solid black;
+  z-index: 0;
+}
 
+.whiteKey:hover {
+  background-color: rgba(253, 5, 5, 0.5);
+}
 
+.blackKey:hover {
+  background-color: rgb(169, 231, 231); 
+}
+
+.blackKey p {
+  color: white;
+  font-size: 1em;
+}
+
+.hidden {
+  display: none !important;
+}
 
 /* This is for the toggle switch */
 .switch {
