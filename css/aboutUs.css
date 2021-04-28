@@ -45,7 +45,7 @@
     }
   }
   body{
-    background:url(/img/piano.jpeg) no-repeat;
+    background:url(./img/piano.jpeg) no-repeat;
     background-size: contain; 
   }
   main {
