@@ -20,12 +20,13 @@
   z-index: 0;
 }
 
-.whiteKey:hover {
-  background-color: rgba(253, 5, 5, 0.5);
+.active.whiteKey {
+  background-color: lightgrey;
+  filter: drop-shadow(5px 5px 4px darkgray);
 }
 
-.blackKey:hover {
-  background-color: rgb(169, 231, 231); 
+.active.blackKey {
+  background-color: darkgray;
 }
 
 .blackKey p {
