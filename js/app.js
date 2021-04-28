@@ -75,9 +75,15 @@ function Note(name) {
   this.currentButton.addEventListener('click', this.handleClick.bind(this));
 
   allNotes.push(this);
+  allAudio.push(this.audioId);
+  allNames.push(this.name);
 }
 
+// Create array with all note objects and another array with all audioId tags
 let allNotes = [];
+let allAudio = []; 
+let allNames = [];
+
 
 new Note('A3');
 new Note('AS3');
