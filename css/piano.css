@@ -47,6 +47,74 @@
   display: none !important;
 }
 
+/* For the slider */
+
+#instrument-slider{
+  border-bottom: 4px solid #000;
+  padding-bottom: 0.25em;
+  margin: 1em auto;
+  position: relative;
+  width: 15em;
+}
+
+/* Create a table that is empty that appears below the slider */
+#instrument-slider:after{
+  content: '';
+  display: table; width: 100%; clear: both;
+}
+
+/* Hide the Radio Buttons */
+#instrument-slider input[type="radio"] {
+  display: none;
+}
+
+/* Affect the label color and size */
+#instrument-slider label {
+  color: #030303;
+  float: left;
+  width: 33%;
+  text-align: center;
+  cursor: pointer;
+  transition: color .5s;
+  margin-bottom: .5em;
+}
+
+#instrument-slider label:hover {
+  color: rgb(216, 108, 198);
+}
+
+#instrument-slider input:checked + label {
+  font-weight: bold;
+}
+
+/* Creates the black circle slider */
+#instrument-slider label:last-of-type:after {
+  display: block;
+  content: "";
+  border: .55em solid black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10.5px;
+  left: 0;
+  margin-left: -0.6em;
+  transition: left 0.5s;
+}
+
+/* Slide the circle based on which of the 3 radio buttons hav ebeen selected */
+#instrument-slider input:checked:nth-of-type(1) ~ label:last-of-type::after {
+  left:17%;
+}
+#instrument-slider input:checked:nth-of-type(2) ~ label:last-of-type::after {
+  left: 50%;
+}
+#instrument-slider input:checked:nth-of-type(3) ~ label:last-of-type::after {
+  left: 83%;
+}
+
+
+
+
+
 /* This is for the toggle switch */
 .switch {
   position: relative;
@@ -147,3 +215,4 @@ input:checked + .slider:before {
  display: inline;
 
 }
+
