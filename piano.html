@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./css/theme.css">
   <link rel="stylesheet" href="./css/piano.css">
   <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,42 +27,47 @@
   </header>
 
   <main>
-    <div id="synthSwitch">
-      <h2>Synth:</h2>
-      <label class="switch">
-        <input id="check" type="checkbox">
-        <span class="slider round"></span>
-      </label>
-    </div>
+    <section id="togglebuttons">
+      <div id="synthSwitch">
+        <h2>Synth:</h2>
+        <label class="switch">
+          <input id="check" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div id="noteDisplay">
+        <h2>Display Notes:</h2>
+        <label class="switch">
+          <input id="check1" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </section>
 
-    <div id="noteDisplay">
-      <h2>Display Notes:</h2>
-      <label class="switch">
-        <input id="check1" type="checkbox">
-        <span class="slider round"></span>
-      </label>
-    </div>
-
-    <section>
-      <button type="button" id="customChord">Record Chord Notes</button>
-      <button type="button" id="playback">Play Custom Chord</button>
+    <section id=recordsection>
+      <h2>Custom Chord</h2>
+      <button type="button" id="customChord"></button>
+      <h2>Playback</h2>
+      <section id="thingy">
+        <button type="button" id="playback"></button>
+      </section>
     </section>
 
     <section id="chordButtons">
       <div>
         <h2>Chords:</h2>
-        <button id="CMajor" type="button">C Major</button>
-        <button id="CSMajor" type="button">C Sharp Major</button>
-        <button id="DMajor" type="button">D Major</button>
-        <button id="DSMajor" type="button">D Sharp Major</button>
-        <button id="EMajor" type="button">E Major</button>
-        <button id="FMajor" type="button">F Major</button>
-        <button id="FSMajor" type="button">F Sharp Major</button>
-        <button id="GMajor" type="button">G Major</button>
-        <button id="GSMajor" type="button">G Sharp Major</button>
-        <button id="AMajor" type="button">A Major</button>
-        <button id="ASMajor" type="button">A Sharp Major</button>
-        <button id="BMajor" type="button">B Major</button>
+        <button id="CMajor" type="button" class="chordbutton">C M</button>
+        <button id="CSMajor" type="button" class="chordbutton">C# M</button>
+        <button id="DMajor" type="button" class="chordbutton">D M</button>
+        <button id="DSMajor" type="button" class="chordbutton">D# M</button>
+        <button id="EMajor" type="button" class="chordbutton">E M</button>
+        <button id="FMajor" type="button" class="chordbutton">F M</button>
+        <button id="FSMajor" type="button" class="chordbutton">F# M</button>
+        <button id="GMajor" type="button" class="chordbutton">G M</button>
+        <button id="GSMajor" type="button" class="chordbutton">G# M</button>
+        <button id="AMajor" type="button" class="chordbutton">A M</button>
+        <button id="ASMajor" type="button" class="chordbutton">A# M</button>
+        <button id="BMajor" type="button" class="chordbutton">B M</button>
       </div>
     </section>
 
