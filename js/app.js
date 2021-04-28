@@ -59,7 +59,15 @@ Note.prototype.handleClick = function () {
   x.load();
   x.play();
 
-  // button to switch color on hover here
+  this.currentButton.classList.add('active');
+  this.currentButton.addEventListener('mouseup', this.stopActive.bind(this));
+  console.log(this.currentButton);
+}
+
+Note.prototype.stopActive = function() {
+  console.log('Im here');
+  console.log(this.currentButton);
+  this.currentButton.classList.remove('active');
 }
 
 function Note(name) {
@@ -72,12 +80,18 @@ function Note(name) {
 
   this.currentButton = document.getElementById(this.buttonName);
   console.log(this.currentButton);
-  this.currentButton.addEventListener('click', this.handleClick.bind(this));
+  this.currentButton.addEventListener('mousedown', this.handleClick.bind(this));
 
   allNotes.push(this);
+  allAudio.push(this.audioId);
+  allNames.push(this.name);
 }
 
+// Create array with all note objects and another array with all audioId tags
 let allNotes = [];
+let allAudio = []; 
+let allNames = [];
+
 
 new Note('A3');
 new Note('AS3');
