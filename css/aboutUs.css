@@ -45,9 +45,9 @@
     }
   }
   body{
-    background:url(/img/piano.jpeg) no-repeat;
+    background:url('../img/piano.jpeg') no-repeat;
     background-size: contain; 
-  }
+  } 
   main {
     max-width: 40rem;
     margin: 0 auto;
@@ -114,11 +114,11 @@ li{
   display: inline;
 }
 main p{
-  margin-top: 30%;
+  background-color: rgba(0,0,0,0.5);
+  margin-top: 5%;
   margin-bottom: 30%;
   margin-left:auto; 
   margin-right: auto;
-  background-color: rgba(0,0,0,0.5);
   font-size: 50pt;
   color: white;
   font-family:'Tangerine', cursive; 
@@ -198,23 +198,23 @@ header{
     background-color:black;
   }
   .slide:nth-child(1) {
-    background: url('/img/Sunny.png') center;
+    background: url('../img/Sunny.png') center;
     border-radius: 360px;
   }
   .slide:nth-child(2){
-      background:url('/img/Ryan.jpeg') center;
+      background:url('../img/Ryan.jpeg') center;
       border-radius: 300px;
   }
   .slide:nth-child(3){
-      background:url('/img/Carlos.jpeg') center;
+      background:url('../img/Carlos.jpeg') center;
       border-radius: 300px;
   }
   .slide:nth-child(4){
-      background:url('/img/Peyton.png') center; 
+      background:url('../img/Peyton.png') center; 
       border-radius: 300px;
   }
   .slide:last-child{
-      background:url('/img/Keian.jpeg') center;
+      background:url('../img/Keian.jpeg') center;
       border-radius: 300px;
   }
   .slide:before {
