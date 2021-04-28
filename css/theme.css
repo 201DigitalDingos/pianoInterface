@@ -3,7 +3,7 @@ html {
 color: black;
 }
 
-main {
+body {
   background-image: linear-gradient(white, ghostwhite, lightgray, gray);
   height: 800px;
 }
