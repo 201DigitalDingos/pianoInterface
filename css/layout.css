@@ -1,109 +1,159 @@
 #keyboard{
   display: grid;
-  grid-template-columns: repeat(42, 15px);
+  grid-template-columns: repeat(64, 15px);
   grid-template-rows: 200px 140px;
-}
-
-/* Octave 1 */
-
-#buttonC3{
-  grid-column: 1/4; 
-  grid-row:1/3;
-}
-#buttonD3{
-  grid-column: 4/7; 
-  grid-row:1/3;
-}
-#buttonE3{
-  grid-column: 7/10; 
-  grid-row:1/3;
-}
-#buttonF3{
-  grid-column: 10/13; 
-  grid-row:1/3;
-}
-#buttonG3{
-  grid-column: 13/16; 
-  grid-row:1/3;
-}
-#buttonA3{
-  grid-column: 16/19; 
-  grid-row:1/3;
-}
-#buttonB3{
-  grid-column: 19/22; 
-  grid-row:1/3;
-}
-#buttonCS3{
-  grid-column: 3/5; 
-  grid-row:1/2;
-}
-#buttonDS3{
-  grid-column: 6/8; 
-  grid-row:1/2;
-}
-#buttonFS3{
-  grid-column: 12/14; 
-  grid-row:1/2;
-}
-#buttonGS3{
-  grid-column: 15/17; 
-  grid-row:1/2;
-}
-#buttonAS3{
-  grid-column: 18/20; 
-  grid-row:1/2;
 }
 
 /* Octave 2 */
 
-#buttonC4{
+#buttonC2{
+  grid-column: 1/4; 
+  grid-row:1/3;
+}
+#buttonD2{
+  grid-column: 4/7; 
+  grid-row:1/3;
+}
+#buttonE2{
+  grid-column: 7/10; 
+  grid-row:1/3;
+}
+#buttonF2{
+  grid-column: 10/13; 
+  grid-row:1/3;
+}
+#buttonG2{
+  grid-column: 13/16; 
+  grid-row:1/3;
+}
+#buttonA2{
+  grid-column: 16/19; 
+  grid-row:1/3;
+}
+#buttonB2{
+  grid-column: 19/22; 
+  grid-row:1/3;
+}
+#buttonCS2{
+  grid-column: 3/5; 
+  grid-row:1/2;
+}
+#buttonDS2{
+  grid-column: 6/8; 
+  grid-row:1/2;
+}
+#buttonFS2{
+  grid-column: 12/14; 
+  grid-row:1/2;
+}
+#buttonGS2{
+  grid-column: 15/17; 
+  grid-row:1/2;
+}
+#buttonAS2{
+  grid-column: 18/20; 
+  grid-row:1/2;
+}
+
+/* Octave 3 */
+
+#buttonC3{
   grid-column: 22/25; 
   grid-row:1/3;
 }
-#buttonD4{
+#buttonD3{
   grid-column: 25/28; 
   grid-row:1/3;
 }
-#buttonE4{
+#buttonE3{
   grid-column: 28/31; 
   grid-row:1/3;
 }
-#buttonF4{
+#buttonF3{
   grid-column: 31/34; 
   grid-row:1/3;
 }
-#buttonG4{
+#buttonG3{
   grid-column: 34/37; 
   grid-row:1/3;
 }
-#buttonA4{
+#buttonA3{
   grid-column: 37/40; 
   grid-row:1/3;
 }
-#buttonB4{
+#buttonB3{
   grid-column: 40/43; 
   grid-row:1/3;
 }
-#buttonCS4{
+#buttonCS3{
   grid-column: 24/26; 
   grid-row:1/2;
 }
-#buttonDS4{
+#buttonDS3{
   grid-column: 27/29; 
   grid-row:1/2;
 }
-#buttonFS4{
+#buttonFS3{
   grid-column: 33/35; 
   grid-row:1/2;
 }
-#buttonGS4{
+#buttonGS3{
   grid-column: 36/38; 
   grid-row:1/2;
 }
-#buttonAS4{
+#buttonAS3{
   grid-column: 39/41; 
   grid-row:1/2;
 }
 
+/* Octave 4 */
+
+#buttonC4{
+  grid-column: 43/46; 
+  grid-row:1/3;
+}
+#buttonD4{
+  grid-column: 46/49; 
+  grid-row:1/3;
+}
+#buttonE4{
+  grid-column: 49/52; 
+  grid-row:1/3;
+}
+#buttonF4{
+  grid-column: 52/55; 
+  grid-row:1/3;
+}
+#buttonG4{
+  grid-column: 55/58; 
+  grid-row:1/3;
+}
+#buttonA4{
+  grid-column: 58/61; 
+  grid-row:1/3;
+}
+#buttonB4{
+  grid-column: 61/64; 
+  grid-row:1/3;
+}
+#buttonCS4{
+  grid-column: 45/47; 
+  grid-row:1/2;
+}
+#buttonDS4{
+  grid-column: 48/50; 
+  grid-row:1/2;
+}
+#buttonFS4{
+  grid-column: 54/56; 
+  grid-row:1/2;
+}
+#buttonGS4{
+  grid-column: 57/59; 
+  grid-row:1/2;
+}
+#buttonAS4{
+  grid-column: 60/62; 
+  grid-row:1/2;
+}
 

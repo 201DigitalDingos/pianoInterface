@@ -64,8 +64,48 @@
       </div>
     </section>
 
+<!-- /////////////////////Render Keyboard Buttons///////////////////// -->
+
     <section id="keyboard">
-      <!-- Octave 1 -->
+      <!-- Octave 2 -->
+      <button class="whiteKey" id="buttonC2" type="button">
+        <p class="hidden text">C</p>
+      </button>
+      <button class="blackKey" id="buttonCS2" type="button">
+        <p class="hidden text">C#</p>
+      </button>
+      <button class="whiteKey" id="buttonD2" type="button">
+        <p class="hidden text">D</p>
+      </button>
+      <button class="blackKey" id="buttonDS2" type="button">
+        <p class="hidden text">D#</p>
+      </button>
+      <button class="whiteKey" id="buttonE2" type="button">
+        <p class="hidden text">E</p>
+      </button>
+      <button class="whiteKey" id="buttonF2" type="button">
+        <p class="hidden text">F</p>
+      </button>
+      <button class="blackKey" id="buttonFS2" type="button">
+        <p class="hidden text">F#</p>
+      </button>
+      <button class="whiteKey" id="buttonG2" type="button">
+        <p class="hidden text">G</p>
+      </button>
+      <button class="blackKey" id="buttonGS2" type="button">
+        <p class="hidden text">G#</p>
+      </button>
+      <button class="whiteKey" id="buttonA2" type="button">
+        <p class="hidden text">A</p>
+      </button>
+      <button class="blackKey" id="buttonAS2" type="button">
+        <p class="hidden text">A#</p>
+      </button>
+      <button class="whiteKey" id="buttonB2" type="button">
+        <p class="hidden text">B</p>
+      </button>
+
+      <!-- Octave 3 -->
       <button class="whiteKey" id="buttonC3" type="button">
         <p class="hidden text">C</p>
       </button>
@@ -102,22 +142,90 @@
       <button class="whiteKey" id="buttonB3" type="button">
         <p class="hidden text">B</p>
       </button>
-      <!-- Octave 2 -->
-      <button class="whiteKey" id="buttonC4" type="button"></button>
-      <button class="blackKey" id="buttonCS4" type="button"></button>
-      <button class="whiteKey" id="buttonD4" type="button"></button>
-      <button class="blackKey" id="buttonDS4" type="button"></button>
-      <button class="whiteKey" id="buttonE4" type="button"></button>
-      <button class="whiteKey" id="buttonF4" type="button"></button>
-      <button class="blackKey" id="buttonFS4" type="button"></button>
-      <button class="whiteKey" id="buttonG4" type="button"></button>
-      <button class="blackKey" id="buttonGS4" type="button"></button>
-      <button class="whiteKey" id="buttonA4" type="button"></button>
-      <button class="blackKey" id="buttonAS4" type="button"></button>
-      <button class="whiteKey" id="buttonB4" type="button"></button>
+      
+      <!-- Octave 4 -->
+      <button class="whiteKey" id="buttonC4" type="button">
+        <p class="hidden text">C</p>
+      </button>
+      <button class="blackKey" id="buttonCS4" type="button">
+        <p class="hidden text">C#</p>
+      </button>
+      <button class="whiteKey" id="buttonD4" type="button">
+        <p class="hidden text">D</p>
+      </button>
+      <button class="blackKey" id="buttonDS4" type="button">
+        <p class="hidden text">D#</p>
+      </button>
+      <button class="whiteKey" id="buttonE4" type="button">
+        <p class="hidden text">E</p>
+      </button>
+      <button class="whiteKey" id="buttonF4" type="button">
+        <p class="hidden text">F</p>
+      </button>
+      <button class="blackKey" id="buttonFS4" type="button">
+        <p class="hidden text">F#</p>
+      </button>
+      <button class="whiteKey" id="buttonG4" type="button">
+        <p class="hidden text">G</p>
+      </button>
+      <button class="blackKey" id="buttonGS4" type="button">
+        <p class="hidden text">G#</p>
+      </button>
+      <button class="whiteKey" id="buttonA4" type="button">
+        <p class="hidden text">A</p>
+      </button>
+      <button class="blackKey" id="buttonAS4" type="button">
+        <p class="hidden text">A#</p>
+      </button>
+      <button class="whiteKey" id="buttonB4" type="button">
+        <p class="hidden text">B</p>
+      </button>
     </section>
 
+
+<!-- /////////////////////Deploy Audio Tags///////////////////// -->
+
     <div class="noteList">
+
+      <!-- Octave 2 -->
+      <audio controls id="AS2Note">
+        <source src="./notes/AS2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="A2Note">
+        <source src="./notes/A2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="B2Note">
+        <source src="./notes/B2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="CS2Note">
+        <source src="./notes/CS2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="C2Note">
+        <source src="./notes/C2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="DS2Note">
+        <source src="./notes/DS2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="D2Note">
+        <source src="./notes/D2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="E2Note">
+        <source src="./notes/E2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="FS2Note">
+        <source src="./notes/FS2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="F2Note">
+        <source src="./notes/F2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="GS2Note">
+        <source src="./notes/GS2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="G2Note">
+        <source src="./notes/G2.mp3" type="audio/mpeg">
+      </audio>
+
+      <!-- Octave 3 -->
       <audio controls id="AS3Note">
         <source src="./notes/AS3.mp3" type="audio/mpeg">
       </audio>
@@ -154,6 +262,45 @@
       <audio controls id="G3Note">
         <source src="./notes/G3.mp3" type="audio/mpeg">
       </audio>
+
+      <!-- Octave 4 -->
+      <audio controls id="AS4Note">
+        <source src="./notes/AS4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="A4Note">
+        <source src="./notes/A4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="B4Note">
+        <source src="./notes/B4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="CS4Note">
+        <source src="./notes/CS4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="C4Note">
+        <source src="./notes/C4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="DS4Note">
+        <source src="./notes/DS4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="D4Note">
+        <source src="./notes/D4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="E4Note">
+        <source src="./notes/E4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="FS4Note">
+        <source src="./notes/FS4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="F4Note">
+        <source src="./notes/F4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="GS4Note">
+        <source src="./notes/GS4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="G4Note">
+        <source src="./notes/G4.mp3" type="audio/mpeg">
+      </audio>
+      
     </div>
   </main>
   <footer></footer>
