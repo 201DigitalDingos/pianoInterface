@@ -32,6 +32,25 @@
   background-color: darkgray;
 }
 
+
+/* Affect key colors on instrument switch */
+
+.synth .whiteKey {
+  background-color: rgb(190, 156, 206);
+}
+
+.synth .blackKey {
+  background-color: darkblue;
+}
+
+.drums .whiteKey {
+  background-color: rgb(143, 169, 241);
+}
+
+.drums .blackKey {
+  background-color: rgb(68, 68, 68);
+}
+
 .blackKey p {
   color: white;
   font-size: 1em;
