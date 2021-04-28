@@ -1,3 +1,4 @@
+
 .noteList {
   display: none;
 }
@@ -70,7 +71,7 @@
 
 /* Affect the label color and size */
 #instrument-slider label {
-  color: #030303;
+  color: black;
   float: left;
   width: 33%;
   text-align: center;
@@ -98,6 +99,8 @@
   left: 0;
   margin-left: -0.6em;
   transition: left 0.5s;
+  margin-bottom: 5px;
+
 }
 
 /* Slide the circle based on which of the 3 radio buttons hav ebeen selected */
@@ -164,7 +167,7 @@ input:checked + .slider:before {
 }
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 20px;
 }
 
 .slider.round:before {
@@ -194,7 +197,7 @@ input:checked + .slider:before {
 }
 
 #playback {
-  border-width: 9px 0px 9px 20px;
+  border-width: 10px 0px 10px 20px;
   /* border-color: red blue rgb(161, 161, 154) green; */
   box-sizing: border-box;
   border-color: transparent transparent transparent green;

@@ -1,6 +1,20 @@
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+#buttonContainer{
+  max-width: 60rem;
+  /* margin: 0 auto; */
+  margin-right: 1em;
+  border-style: solid; 
+  border-width:thin;
+  background: url('../img/keyboardTop.png') no-repeat;
+  background-size:100%;
+}
 #keyboard{
   display: grid;
-  grid-template-columns: repeat(64, 15px);
+  grid-template-columns: repeat(63, 15px);
   grid-template-rows: 200px 140px;
 }
 
