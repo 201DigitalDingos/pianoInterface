@@ -27,14 +27,21 @@
   </header>
 
   <main>
-    <section id="togglebuttons">
-      <div id="synthSwitch">
-        <h2>Synth:</h2>
-        <label class="switch">
-          <input id="check" type="checkbox">
-          <span class="slider round"></span>
-        </label>
+
+      <div id="instrument-slider">
+        <input id="piano" type="radio" name="instrument" checked>
+        <label for="piano">Piano</label>
+
+        <input id="synth" type="radio" name="instrument">
+        <label for="synth">Synth</label>
+
+        <input id="drums" type="radio" name="instrument">
+        <label for="drums">Drums</label>
       </div>
+
+  
+  </section>
+    <section id="togglebuttons">
       <div id="noteDisplay">
         <h2>Display Notes:</h2>
         <label class="switch">

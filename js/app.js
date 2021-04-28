@@ -61,12 +61,10 @@ Note.prototype.handleClick = function () {
 
   this.currentButton.classList.add('active');
   this.currentButton.addEventListener('mouseup', this.stopActive.bind(this));
-  console.log(this.currentButton);
 }
 
 Note.prototype.stopActive = function() {
   console.log('Im here');
-  console.log(this.currentButton);
   this.currentButton.classList.remove('active');
 }
 
@@ -76,10 +74,7 @@ function Note(name) {
   this.normalMP3 = `notes/${name}.mp3`;
   this.buttonName = `button${name}`;
 
-  console.log(this);
-
   this.currentButton = document.getElementById(this.buttonName);
-  console.log(this.currentButton);
   this.currentButton.addEventListener('mousedown', this.handleClick.bind(this));
 
   allNotes.push(this);
