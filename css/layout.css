@@ -3,14 +3,26 @@ main {
   margin: 0 auto;
   padding: 0 1rem;
 }
-#buttonContainer{
+/* #buttonContainer{
   max-width: 60rem;
-  /* margin: 0 auto; */
   margin-right: 1em;
   border-style: solid; 
   border-width:thin;
   background: url('../img/keyboardTop.png') no-repeat;
   background-size:100%;
+} */
+#buttonContainer{
+  margin-right: 1em;
+  display: grid;
+  grid-template-columns: repeat(20, 47.2px);
+  grid-template-rows: repeat(4, 49.25px);
+  background: url('../img/keyboardTop.png') no-repeat;
+  background-size: cover;
+}
+#chordButtons{
+  margin-right: 1em;
+  background-color: white;
+  margin-bottom: 2px;
 }
 #keyboard{
   display: grid;
