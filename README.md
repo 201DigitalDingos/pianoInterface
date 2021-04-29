@@ -9,5 +9,9 @@ Links used:
 
 [This](https://meyerweb.com/eric/tools/css/reset/) link used for reset.css file
 
+[Link to Peyton’s theme song] https://www.youtube.com/watch?v=j65RC4Tg1D8
+
+[Creating a slider] https://stackoverflow.com/questions/46885310/create-slider-selection-from-radio-button
+
 Comments here:
 

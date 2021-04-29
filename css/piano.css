@@ -104,7 +104,7 @@
 }
 
 #instrument-slider label:hover {
-  color: rgb(216, 108, 198);
+  color: rgb(204, 72, 186);
 }
 
 #instrument-slider input:checked + label {

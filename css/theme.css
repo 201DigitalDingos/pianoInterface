@@ -18,13 +18,6 @@ p {
   animation: fadein 3s;
 }
 
-/* .firstLetter {
-  font-size: 5px;
-  margin-left: 50px;
-  color: black;
-  
-} */
-
 h1 {
   box-sizing: content-box;
   font-family: 'Tangerine', cursive;; 
