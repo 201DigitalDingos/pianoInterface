@@ -218,6 +218,8 @@ input:checked + .slider:before {
   box-sizing: border-box;
   border-color: transparent transparent transparent green;
   margin: 0 5px;
+  background-color: white;
+
 }
 #recordsection{
   width: 30px;
