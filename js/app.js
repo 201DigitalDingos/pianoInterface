@@ -275,18 +275,18 @@ new Chord('ASMajor', 'AS', 'D', 'F');
 new Chord('BMajor', 'B', 'DS', 'FS');
 
 // minor chords
-new Chord('Cminor', 'C', 'F', 'G');
-new Chord('CSminor', 'CS', 'FS', 'GS');
-new Chord('Dminor', 'D', 'G', 'A');
-new Chord('DSminor', 'DS', 'GS', 'AS');
-new Chord('Eminor', 'E', 'A', 'B');
-new Chord('Fminor', 'F', 'AS', 'C');
-new Chord('FSminor', 'FS', 'B', 'CS');
-new Chord('Gminor', 'G', 'C', 'D');
-new Chord('GSminor', 'GS', 'CS', 'DS');
-new Chord('Aminor', 'A', 'D', 'E');
+new Chord('Cminor', 'C', 'DS', 'G');
+new Chord('CSminor', 'CS', 'E', 'GS');
+new Chord('Dminor', 'D', 'F', 'A');
+new Chord('DSminor', 'DS', 'FS', 'AS');
+new Chord('Eminor', 'E', 'G', 'B');
+new Chord('Fminor', 'F', 'GS', 'C');
+new Chord('FSminor', 'FS', 'A', 'CS');
+new Chord('Gminor', 'G', 'AS', 'D');
+new Chord('GSminor', 'GS', 'B', 'DS');
+new Chord('Aminor', 'A', 'C', 'E');
 new Chord('ASminor', 'AS', 'DS', 'F');
-new Chord('Bminor', 'B', 'E', 'FS');
+new Chord('Bminor', 'B', 'D', 'FS');
 
 
 // update local storage
