@@ -162,10 +162,21 @@ Chord.prototype.handleClick = function() {
   z.play();
 }
 
+
+Chord.prototype.stopActive = function() {
+  // event handler removes "active" class when click stops
+  this.currentButton1.classList.remove('active');
+  this.currentButton2.classList.remove('active');
+  this.currentButton3.classList.remove('active');
+
+}
+
+
 Chord.prototype.revealNotes = function() {
   for (let note of noteArray) {
     note.setAttribute('class', 'hidden text');
   }
+
    // construct note button ID's
    this.buttonName1 = `button${this.noteName1}`;
    this.buttonName2 = `button${this.noteName2}`;
@@ -182,6 +193,24 @@ Chord.prototype.revealNotes = function() {
    this.paragraphTag1.setAttribute('class', 'shown text');
    this.paragraphTag2.setAttribute('class', 'shown text');
    this.paragraphTag3.setAttribute('class', 'shown text');
+   // point to the audio tags on the page
+   const x = document.getElementById(this.audioId_1);
+   const y = document.getElementById(this.audioId_2);
+   const z = document.getElementById(this.audioId_3);
+
+  for(let i=0; i<3; i++){
+   // give button "active" class when clicked
+   console.log(this.currentButton1);
+  this.currentButton1.classList.add('active');
+  this.currentButton2.classList.add('active');
+  this.currentButton3.classList.add('active');
+
+  // assign event listener to current clicked button
+  x.addEventListener('ended', this.stopActive.bind(this));
+  y.addEventListener('ended', this.stopActive.bind(this));
+  z.addEventListener('ended', this.stopActive.bind(this));
+
+  }
 }
 
 
