@@ -24,7 +24,7 @@
 
 .active.whiteKey {
   background-color: lightgrey;
-  filter: drop-shadow(5px 5px 4px darkgray);
+  filter: drop-shadow(5px 0px 5px darkgray);
 }
 
 .active.blackKey {
@@ -39,7 +39,11 @@
 }
 
 .synth .blackKey {
-  background-color: darkblue;
+  background-color: rgb(29, 29, 158);
+}
+
+.synth .active .whiteKey {
+  background-color: darkmagenta;
 }
 
 .drums .whiteKey {
@@ -47,7 +51,7 @@
 }
 
 .drums .blackKey {
-  background-color: rgb(68, 68, 68);
+  background-color: rgb(25, 29, 24);
 }
 
 .blackKey p {
@@ -114,13 +118,19 @@
   border: .30em solid black;
   border-radius: 50%;
   position: absolute;
-  bottom: -20.5px;
+  bottom: -17.1px;
   left: 0;
   margin-left: -0.6em;
   transition: left 0.5s;
   margin-bottom: 10px;
 
 }
+
+#chordFlex {
+  display: flex;
+  justify-content: center;
+}
+
 
 /* Slide the circle based on which of the 3 radio buttons hav ebeen selected */
 #instrument-slider input:checked:nth-of-type(1) ~ label:last-of-type::after {
@@ -173,7 +183,7 @@
 }
 
 input:checked + .slider {
-  background-color: #b73df0;
+  background-color: #87b9db;
 }
 
 input:checked + .slider:before {
@@ -196,11 +206,12 @@ input:checked + .slider:before {
 
 .chordbutton {
   border-radius: 50%;
-  background-color: beige;
+  background-color: rgb(214, 214, 213);
+  margin: 0px 3px;
 }
 
 .chordbutton:hover {
-  background-color: rgb(185, 240, 240);
+  background-color: #99c2dd;
 }
 
 #customChord {
