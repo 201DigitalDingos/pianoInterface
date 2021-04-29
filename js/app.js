@@ -25,6 +25,7 @@ function toggleRecord() {
   recording = !(recording);
   if (recording) {
     recordingArray = [];
+    document.getElementById('customChord').style.backgroundColor='red';
   }
 }
 
@@ -64,7 +65,6 @@ Note.prototype.handleClick = function () {
 }
 
 Note.prototype.stopActive = function() {
-  console.log('Im here');
   this.currentButton.classList.remove('active');
 }
 
@@ -167,6 +167,7 @@ function handlePlayback() {
     const x = document.getElementById(note);
     x.load();
     x.play();
+    document.getElementById('customChord').style.backgroundColor='pink';
   }
 }
 

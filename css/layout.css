@@ -3,14 +3,13 @@ main {
   margin: 0 auto;
   padding: 0 1rem;
 }
-/* #buttonContainer{
-  max-width: 60rem;
-  margin-right: 1em;
-  border-style: solid; 
-  border-width:thin;
-  background: url('../img/keyboardTop.png') no-repeat;
-  background-size:100%;
-} */
+h1{
+animation: fadein 3s; 
+}
+@keyframes fadein{
+  from {opacity: 0;}
+  to {opacity: 1}
+}
 #buttonContainer{
   margin-right: 1em;
   display: grid;
@@ -18,11 +17,28 @@ main {
   grid-template-rows: repeat(4, 49.25px);
   background: url('../img/keyboardTop.png') no-repeat;
   background-size: cover;
+  animation: fadein 3s;
+  border-left-color: black;
+  border-left-width: thin;
+  border-left-style: solid;  
+  border-top-color: black;
+  border-top-width: thin;
+  border-top-style: solid; 
+  border-right-color: black;
+  border-right-width: thin;
+  border-right-style: solid;   
 }
 #chordButtons{
   margin-right: 1em;
   background-color: white;
   margin-bottom: 2px;
+  animation: fadein 4s;
+  border-left:black; 
+  border-left-style: solid;
+  border-left-width: thin;
+  border-right:black; 
+  border-right-style: solid;
+  border-right-width: thin;
 }
 #keyboard{
   display: grid;
