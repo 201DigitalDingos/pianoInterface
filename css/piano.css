@@ -1,4 +1,5 @@
 
+
 .noteList {
   display: none;
 }
@@ -72,9 +73,10 @@
 #instrument-slider{
   border-bottom: 4px solid #000;
   padding-bottom: 0.25em;
-  margin: 1em auto;
+  margin: .5em auto;
   position: relative;
   width: 15em;
+
 }
 
 /* Create a table that is empty that appears below the slider */
@@ -111,14 +113,14 @@
 #instrument-slider label:last-of-type:after {
   display: block;
   content: "";
-  border: .55em solid black;
+  border: .30em solid black;
   border-radius: 50%;
   position: absolute;
-  bottom: -10.5px;
+  bottom: -20.5px;
   left: 0;
   margin-left: -0.6em;
   transition: left 0.5s;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
 }
 
@@ -228,13 +230,38 @@ input:checked + .slider:before {
   display: inline;
 } */
 
-#recordsection {
+/* #recordsection {
   display: flex;
   align-items: flex-end;
+} */
+#recordsection{
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 12px;
+  grid-row: 2/4;
+  grid-column: 6/7;
 }
-
 #thingy {
- display: inline;
+ /* display: inline; */
+ margin-top:5px;
+ margin-left:10px;
+ width: 30px;
+  height: 30px;
+  font-size: 15px;
+ grid-row: 3/4;
+ grid-column: 6/7;
 
 }
+#togglebuttons{
+  grid-row: 2/3;
+  grid-column: 14/15;
+}
+#instrument-slider{
+  margin-top: 20px;
+  grid-row:1/2;
+  grid-column: 8/14;
+}
+
 
