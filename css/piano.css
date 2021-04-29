@@ -126,10 +126,16 @@
 
 }
 
-#chordFlex {
+#majorChords {
   display: flex;
   justify-content: center;
 }
+
+#minorChords {
+  display: flex;
+  justify-content: center;
+}
+
 
 
 /* Slide the circle based on which of the 3 radio buttons hav ebeen selected */

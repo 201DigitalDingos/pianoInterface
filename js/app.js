@@ -1,15 +1,18 @@
 'use strict';
 
-// recording
+// Assign Variables
 let recording = false;
 let showNote = false;
-const noteArray = document.getElementsByClassName("text");
-// console.log(noteArray);
-const recordButton = document.getElementById("customChord");
+let octave = '2';
 
-// recording array
+// Create Arrays
 let recordingArray = [];
+let allNotes = [];
+let allAudio = [];
+let allNames = [];
+let allChords = [];
 
+// Declare Functions
 function localStorageUpdate() {
   let storedNotes = localStorage.getItem(`storedKeys`);
   if (storedNotes) {
@@ -17,10 +20,16 @@ function localStorageUpdate() {
   }
 }
 
-// record button listener
-recordButton.addEventListener('click', toggleRecord);
 
-// function callback for recording custom chord
+/////////////////////////////////RECORD FEATURE/////////////////////////////////////////////////
+
+// 1. RECORD
+
+///////// create abstract record button
+const recordButton = document.getElementById("customChord");
+///////// event listener for record button
+recordButton.addEventListener('click', toggleRecord);
+////////// event handler for record button
 function toggleRecord() {
   recording = !(recording);
   if (recording) {
@@ -29,20 +38,42 @@ function toggleRecord() {
   }
 }
 
-// listener to button for text toggle
+// 2. PLAYBACK
+
+// create abstract playback button
+const playbackButton = document.getElementById("playback");
+// event listener for playback button
+playbackButton.addEventListener('click', handlePlayback);
+// event handler for playback
+function handlePlayback() {
+  for (let note of recordingArray) {
+    const x = document.getElementById(note);
+    x.load();
+    x.play();
+    document.getElementById('customChord').style.backgroundColor='pink';
+  }
+}
+
+
+/////////////////////////////////NOTE DISPLAY FEATURE/////////////////////////////////////////////////
+
+// fill array with note text
+const noteArray = document.getElementsByClassName("text");
+// create abstract display notes button
 const noteDisplay = document.getElementById("noteDisplay");
-
-// event listener for text toggle
+// event listener for display notes button
 noteDisplay.addEventListener('change', noteDisplayFunc);
-
-// callback function for text toggle
+// event handler for display notes button
 function noteDisplayFunc() {
+  // change boolean when button is clicked
   showNote = !(showNote);
+  // show notes when button is turned on
   if (showNote === true) {
     for (let note of noteArray) {
       note.setAttribute('class', 'shown text');
     }
   }
+  //hide notes when button is turned off
   if (showNote === false) {
     for (let note of noteArray) {
       note.setAttribute('class', 'hidden text');
@@ -50,42 +81,113 @@ function noteDisplayFunc() {
   }
 }
 
-Note.prototype.handleClick = function () {
-  if (recording === true) {
-    recordingArray.push(this.audioId);
-    let recordedStorage = JSON.stringify(recordingArray);
-    localStorage.setItem(`storedKeys`, recordedStorage);
-  }
-  const x = document.getElementById(this.audioId);
-  x.load();
-  x.play();
 
-  this.currentButton.classList.add('active');
-  this.currentButton.addEventListener('mouseup', this.stopActive.bind(this));
-}
-
-Note.prototype.stopActive = function() {
-  this.currentButton.classList.remove('active');
-}
+///////////////////////////////////////"NOTE" OBJECTS AND METHODS///////////////////////////////////////////////////////////
 
 function Note(name) {
+  // set note name, audio ID, normal mp3 file
   this.name = name;
   this.audioId = `${name}Note`;
   this.normalMP3 = `notes/${name}.mp3`;
+  // create abstract note button
   this.buttonName = `button${name}`;
-
   this.currentButton = document.getElementById(this.buttonName);
+  // assign event listener to button
+  // event handler stays active when mouse is down
   this.currentButton.addEventListener('mousedown', this.handleClick.bind(this));
-
+  // fill arrays
   allNotes.push(this);
   allAudio.push(this.audioId);
   allNames.push(this.name);
 }
 
-// Create array with all note objects and another array with all audioId tags
-let allNotes = [];
-let allAudio = []; 
-let allNames = [];
+Note.prototype.handleClick = function () {
+  // put notes in local storage array if recording is active
+  if (recording === true) {
+    recordingArray.push(this.audioId);
+    let recordedStorage = JSON.stringify(recordingArray);
+    localStorage.setItem(`storedKeys`, recordedStorage);
+  }
+  // find audio tag by element
+  const x = document.getElementById(this.audioId);
+  // call audio element methods to play mp3 file
+  x.load();
+  x.play();
+  // give button "active" class when clicked
+  this.currentButton.classList.add('active');
+  // assign event listener to current clicked button
+  this.currentButton.addEventListener('mouseup', this.stopActive.bind(this));
+}
+
+Note.prototype.stopActive = function() {
+  // event handler removes "active" class when click stops
+  this.currentButton.classList.remove('active');
+}
+
+
+///////////////////////////////////////"CHORD" OBJECTS AND METHODS///////////////////////////////////////////////////////////
+
+function Chord(name, note1, note2, note3) {
+  // set chord name
+  this.name = name;
+  // set chord notes
+  this.noteName1 = note1 + octave;
+  this.noteName2 = note2 + octave;
+  this.noteName3 = note3 + octave;
+  // set audio tag ID's for chord notes
+  this.audioId_1 = `${this.noteName1}Note`;
+  this.audioId_2 = `${this.noteName2}Note`;
+  this.audioId_3 = `${this.noteName3}Note`;
+  // create abstract chord button
+  this.currentButton = document.getElementById(this.name);
+  // assign event listeners to button
+  this.currentButton.addEventListener('click', this.handleClick.bind(this));
+  this.currentButton.addEventListener('click', this.revealNotes.bind(this));
+  // fill chord array
+  allChords.push(this);
+}
+
+Chord.prototype.handleClick = function() {
+  // store audio tags in variables
+  const x = document.getElementById(this.audioId_1);
+  const y = document.getElementById(this.audioId_2);
+  const z = document.getElementById(this.audioId_3);
+  // load audio tag files
+  x.load();
+  y.load();
+  z.load();
+  // play audio tag files
+  x.play();
+  y.play();
+  z.play();
+}
+
+Chord.prototype.revealNotes = function() {
+  for (let note of noteArray) {
+    note.setAttribute('class', 'hidden text');
+  }
+   // construct note button ID's
+   this.buttonName1 = `button${this.noteName1}`;
+   this.buttonName2 = `button${this.noteName2}`;
+   this.buttonName3 = `button${this.noteName3}`;
+   // scope note buttons by ID
+   this.currentButton1 = document.getElementById(this.buttonName1);
+   this.currentButton2 = document.getElementById(this.buttonName2);
+   this.currentButton3 = document.getElementById(this.buttonName3);
+   // scope p tags within note buttons
+   this.paragraphTag1 = this.currentButton1.firstElementChild;
+   this.paragraphTag2 = this.currentButton2.firstElementChild;
+   this.paragraphTag3 = this.currentButton3.firstElementChild;
+   // display note text in p tag
+   this.paragraphTag1.setAttribute('class', 'shown text');
+   this.paragraphTag2.setAttribute('class', 'shown text');
+   this.paragraphTag3.setAttribute('class', 'shown text');
+}
+
+
+
+
+/////////////////////////INSTANTIATE NOTE AND CHORD OBJECTS////////////////////////////////
 
 // Octave 2
 new Note('A2');
@@ -129,107 +231,34 @@ new Note('FS4');
 new Note('G4');
 new Note('GS4');
 
-// chords
-const cMajorButton = document.getElementById("CMajor");
-const cSMajorButton = document.getElementById("CSMajor");
-const dMajorButton = document.getElementById("DMajor");
-const dSMajorButton = document.getElementById("DSMajor");
-const eMajorButton = document.getElementById("EMajor");
-const fMajorButton = document.getElementById("FMajor");
-const fSMajorButton = document.getElementById("FSMajor");
-const gMajorButton = document.getElementById("GMajor");
-const gSMajorButton = document.getElementById("GSMajor");
-const aMajorButton = document.getElementById("AMajor");
-const aSMajorButton = document.getElementById("ASMajor");
-const bMajorButton = document.getElementById("BMajor");
+// major chords
+new Chord('CMajor', 'C', 'E', 'G');
+new Chord('CSMajor', 'CS', 'F', 'GS');
+new Chord('DMajor', 'D', 'FS', 'A');
+new Chord('DSMajor', 'DS', 'G', 'AS');
+new Chord('EMajor', 'E', 'GS', 'B');
+new Chord('FMajor', 'F', 'A', 'C');
+new Chord('FSMajor', 'FS', 'AS', 'CS');
+new Chord('GMajor', 'G', 'B', 'D');
+new Chord('GSMajor', 'GS', 'C', 'DS');
+new Chord('AMajor', 'A', 'CS', 'E');
+new Chord('ASMajor', 'AS', 'D', 'F');
+new Chord('BMajor', 'B', 'DS', 'FS');
 
-// chords event listeners
-cMajorButton.addEventListener('click', handleClickCMajor);
-cSMajorButton.addEventListener('click', handleClickCSMajor);
-dMajorButton.addEventListener('click', handleClickDMajor);
-dSMajorButton.addEventListener('click', handleClickDSMajor);
-eMajorButton.addEventListener('click', handleClickEMajor);
-fMajorButton.addEventListener('click', handleClickFMajor);
-fSMajorButton.addEventListener('click', handleClickFSMajor);
-gMajorButton.addEventListener('click', handleClickGMajor);
-gSMajorButton.addEventListener('click', handleClickGSMajor);
-aMajorButton.addEventListener('click', handleClickAMajor);
-aSMajorButton.addEventListener('click', handleClickASMajor);
-bMajorButton.addEventListener('click', handleClickBMajor);
+// minor chords
+new Chord('Cminor', 'C', 'F', 'G');
+new Chord('CSminor', 'CS', 'FS', 'GS');
+new Chord('Dminor', 'D', 'G', 'A');
+new Chord('DSminor', 'DS', 'GS', 'AS');
+new Chord('Eminor', 'E', 'A', 'B');
+new Chord('Fminor', 'F', 'AS', 'C');
+new Chord('FSminor', 'FS', 'B', 'CS');
+new Chord('Gminor', 'G', 'C', 'D');
+new Chord('GSminor', 'GS', 'CS', 'DS');
+new Chord('Aminor', 'A', 'D', 'E');
+new Chord('ASminor', 'AS', 'DS', 'F');
+new Chord('Bminor', 'B', 'E', 'FS');
 
-// Event listener for playback button
-const playbackButton = document.getElementById("playback");
 
-playbackButton.addEventListener('click', handlePlayback);
-
-function handlePlayback() {
-  for (let note of recordingArray) {
-    const x = document.getElementById(note);
-    x.load();
-    x.play();
-    document.getElementById('customChord').style.backgroundColor='pink';
-  }
-}
-
-// C Major chord
-function handleClickCMajor() {
-  playChord("C3Note", "E3Note", "G3Note");
-}
-
-function handleClickCSMajor() {
-  playChord("CS3Note", "F3Note", "GS3Note");
-}
-
-function handleClickDMajor() {
-  playChord("D3Note", "FS3Note", "A3Note");
-}
-
-function handleClickDSMajor() {
-  playChord("DS3Note", "G3Note", "AS3Note");
-}
-
-function handleClickEMajor() {
-  playChord("E3Note", "GS3Note", "B3Note");
-}
-
-function handleClickFMajor() {
-  playChord("F3Note", "A3Note", "C3Note");
-}
-
-function handleClickFSMajor() {
-  playChord("FS3Note", "AS3Note", "CS3Note");
-}
-
-function handleClickGMajor() {
-  playChord("G3Note", "B3Note", "D3Note");
-}
-
-function handleClickGSMajor() {
-  playChord("GS3Note", "C3Note", "DS3Note");
-}
-
-function handleClickAMajor() {
-  playChord("A3Note", "CS3Note", "E3Note");
-}
-
-function handleClickASMajor() {
-  playChord("AS3Note", "D3Note", "F3Note");
-}
-
-function handleClickBMajor() {
-  playChord("B3Note", "DS3Note", "FS3Note");
-}
-
-function playChord(a, b, c) {
-  const x = document.getElementById(a);
-  const y = document.getElementById(b);
-  const z = document.getElementById(c);
-  x.load();
-  y.load();
-  z.load();
-  x.play();
-  y.play();
-  z.play();
-}
-
+// update local storage
 localStorageUpdate();
