@@ -1,7 +1,7 @@
+
 .noteList {
   display: none;
 }
-
 .blackKey {
   background-color: black; 
   border-style: solid;
@@ -10,6 +10,7 @@
   border: 1px solid black;
   z-index: 1;
   margin: 0px 10px;
+  font-weight: bold;
 }
 
 .whiteKey {
@@ -18,24 +19,130 @@
   border-width:thin;
   border: 1px solid black;
   z-index: 0;
+  font-weight: bold;
 }
 
-.whiteKey:hover {
-  background-color: rgba(253, 5, 5, 0.5);
+.active.whiteKey {
+  background-color: lightgrey;
+  filter: drop-shadow(5px 0px 5px darkgray);
 }
 
-.blackKey:hover {
-  background-color: rgb(169, 231, 231); 
+.active.blackKey {
+  background-color: darkgray;
+}
+
+
+/* Affect key colors on instrument switch */
+
+.synth .whiteKey {
+  background-color: rgb(190, 156, 206);
+}
+
+.synth .blackKey {
+  background-color: rgb(29, 29, 158);
+}
+
+.synth .active .whiteKey {
+  background-color: darkmagenta;
+}
+
+.drums .whiteKey {
+  background-color: rgb(143, 169, 241);
+}
+
+.drums .blackKey {
+  background-color: rgb(25, 29, 24);
 }
 
 .blackKey p {
   color: white;
   font-size: 1em;
+  font-family: 'Pacifico', cursive;
+}
+
+.whiteKey p {
+  margin-top: auto !important;
+  font-size: 1.3em;
+  font-family: 'Pacifico', cursive;
 }
 
 .hidden {
   display: none !important;
 }
+
+/* For the slider */
+
+#instrument-slider{
+  border-bottom: 4px solid #000;
+  padding-bottom: 0.25em;
+  margin: .5em auto;
+  position: relative;
+  width: 15em;
+
+}
+
+/* Create a table that is empty that appears below the slider */
+#instrument-slider:after{
+  content: '';
+  display: table; width: 100%; clear: both;
+}
+
+/* Hide the Radio Buttons */
+#instrument-slider input[type="radio"] {
+  display: none;
+}
+
+/* Affect the label color and size */
+#instrument-slider label {
+  color: black;
+  float: left;
+  width: 33%;
+  text-align: center;
+  cursor: pointer;
+  transition: color .5s;
+  margin-bottom: .5em;
+}
+
+#instrument-slider label:hover {
+  color: rgb(216, 108, 198);
+}
+
+#instrument-slider input:checked + label {
+  font-weight: bold;
+}
+
+/* Creates the black circle slider */
+#instrument-slider label:last-of-type:after {
+  display: block;
+  content: "";
+  border: .30em solid black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -17.1px;
+  left: 0;
+  margin-left: -0.6em;
+  transition: left 0.5s;
+  margin-bottom: 10px;
+
+}
+
+#chordFlex {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Slide the circle based on which of the 3 radio buttons hav ebeen selected */
+#instrument-slider input:checked:nth-of-type(1) ~ label:last-of-type::after {
+  left:17%;
+}
+#instrument-slider input:checked:nth-of-type(2) ~ label:last-of-type::after {
+  left: 50%;
+}
+#instrument-slider input:checked:nth-of-type(3) ~ label:last-of-type::after {
+  left: 83%;
+}
+
 
 /* This is for the toggle switch */
 .switch {
@@ -76,7 +183,7 @@
 }
 
 input:checked + .slider {
-  background-color: #b73df0;
+  background-color: #87b9db;
 }
 
 input:checked + .slider:before {
@@ -86,9 +193,83 @@ input:checked + .slider:before {
 }
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 20px;
 }
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#togglebuttons {
+  display: flex;
+}
+
+.chordbutton {
+  border-radius: 50%;
+  background-color: rgb(214, 214, 213);
+  margin: 0px 3px;
+}
+
+.chordbutton:hover {
+  background-color: #99c2dd;
+}
+
+#customChord {
+  border-radius: 50%;
+  background-color: rgb(252, 69, 36,.5);
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#playback {
+  border-width: 10px 0px 10px 20px;
+  /* border-color: red blue rgb(161, 161, 154) green; */
+  box-sizing: border-box;
+  border-color: transparent transparent transparent green;
+  margin: 0 5px;
+  background-color: white;
+
+}
+#recordsection{
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 12px;
+  grid-row: 2/4;
+  grid-column: 6/7;
+}
+#thingy {
+ margin-top:5px;
+ margin-left:10px;
+ width: 30px;
+  height: 30px;
+  font-size: 15px;
+ grid-row: 3/4;
+ grid-column: 6/7;
+
+}
+#togglebuttons{
+  grid-row: 2/3;
+  grid-column: 14/15;
+}
+#instrument-slider{
+  margin-top: 20px;
+  grid-row:1/2;
+  grid-column: 8/14;
+}
+@keyframes fadein{
+  from {opacity: 0;}
+  to {opacity: 1}
+}
+#keyboard{
+  animation:fadein 3s;
+}
+#screenTime{
+  width: 50px;
+  height: 50px;
+  grid-row:2/4;
+  grid-column:10/12;
 }

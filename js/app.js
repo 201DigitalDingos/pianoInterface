@@ -25,6 +25,7 @@ function toggleRecord() {
   recording = !(recording);
   if (recording) {
     recordingArray = [];
+    document.getElementById('customChord').style.backgroundColor='red';
   }
 }
 
@@ -59,7 +60,12 @@ Note.prototype.handleClick = function () {
   x.load();
   x.play();
 
-  // button to switch color on hover here
+  this.currentButton.classList.add('active');
+  this.currentButton.addEventListener('mouseup', this.stopActive.bind(this));
+}
+
+Note.prototype.stopActive = function() {
+  this.currentButton.classList.remove('active');
 }
 
 function Note(name) {
@@ -68,17 +74,34 @@ function Note(name) {
   this.normalMP3 = `notes/${name}.mp3`;
   this.buttonName = `button${name}`;
 
-  console.log(this);
-
   this.currentButton = document.getElementById(this.buttonName);
-  console.log(this.currentButton);
-  this.currentButton.addEventListener('click', this.handleClick.bind(this));
+  this.currentButton.addEventListener('mousedown', this.handleClick.bind(this));
 
   allNotes.push(this);
+  allAudio.push(this.audioId);
+  allNames.push(this.name);
 }
 
+// Create array with all note objects and another array with all audioId tags
 let allNotes = [];
+let allAudio = []; 
+let allNames = [];
 
+// Octave 2
+new Note('A2');
+new Note('AS2');
+new Note('B2');
+new Note('C2');
+new Note('CS2');
+new Note('D2');
+new Note('DS2');
+new Note('E2');
+new Note('F2');
+new Note('FS2');
+new Note('G2');
+new Note('GS2');
+
+// Octave 3
 new Note('A3');
 new Note('AS3');
 new Note('B3');
@@ -91,6 +114,20 @@ new Note('F3');
 new Note('FS3');
 new Note('G3');
 new Note('GS3');
+
+// Octave 4
+new Note('A4');
+new Note('AS4');
+new Note('B4');
+new Note('C4');
+new Note('CS4');
+new Note('D4');
+new Note('DS4');
+new Note('E4');
+new Note('F4');
+new Note('FS4');
+new Note('G4');
+new Note('GS4');
 
 // chords
 const cMajorButton = document.getElementById("CMajor");
@@ -130,6 +167,7 @@ function handlePlayback() {
     const x = document.getElementById(note);
     x.load();
     x.play();
+    document.getElementById('customChord').style.backgroundColor='pink';
   }
 }
 
