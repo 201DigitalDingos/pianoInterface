@@ -162,13 +162,22 @@ Chord.prototype.handleClick = function() {
   z.play();
 }
 
-
+// Run this function when the sound stops playing
 Chord.prototype.stopActive = function() {
   // event handler removes "active" class when click stops
   this.currentButton1.classList.remove('active');
   this.currentButton2.classList.remove('active');
   this.currentButton3.classList.remove('active');
 
+  // Remove the shown class from the p tags
+  this.paragraphTag1.classList.remove('shown');
+  this.paragraphTag2.classList.remove('shown');
+  this.paragraphTag3.classList.remove('shown');
+
+  // Add the hidden class to p tags
+  this.paragraphTag1.classList.add('hidden');
+  this.paragraphTag2.classList.add('hidden');
+  this.paragraphTag3.classList.add('hidden');
 }
 
 
@@ -209,6 +218,8 @@ Chord.prototype.revealNotes = function() {
   x.addEventListener('ended', this.stopActive.bind(this));
   y.addEventListener('ended', this.stopActive.bind(this));
   z.addEventListener('ended', this.stopActive.bind(this));
+
+
 
   }
 }
