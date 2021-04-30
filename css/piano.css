@@ -28,7 +28,7 @@
 }
 
 .active.blackKey {
-  background-color: darkgray;
+  background-color: rgb(99, 98, 98);
 }
 
 
@@ -104,7 +104,7 @@
 }
 
 #instrument-slider label:hover {
-  color: rgb(216, 108, 198);
+  color: rgb(204, 72, 186);
 }
 
 #instrument-slider input:checked + label {
@@ -126,10 +126,16 @@
 
 }
 
-#chordFlex {
+#majorChords {
   display: flex;
   justify-content: center;
 }
+
+#minorChords {
+  display: flex;
+  justify-content: center;
+}
+
 
 
 /* Slide the circle based on which of the 3 radio buttons hav ebeen selected */
